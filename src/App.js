@@ -20,7 +20,7 @@ const App = () => {
   const user = useSelector((state) => state.user);
 
   return (
-    <div className="App">
+    <div>
       <HashRouter>
         <Routes>
           <Route path="/sign_up" element={<SignUpPage />} />
