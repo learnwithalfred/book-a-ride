@@ -1,21 +1,21 @@
 /* eslint-disable react/jsx-one-expression-per-line */
-import { useState, useEffect } from "react";
-import Fade from "react-reveal/Fade";
-import { ChromePicker } from "react-color";
-import { useDispatch, useSelector } from "react-redux";
-import { Link, useParams } from "react-router-dom";
-import { SpinnerRoundOutlined } from "spinners-react";
-import Container from "./Container";
-import "./DetailsPage.css";
+import { useState, useEffect } from 'react';
+import Fade from 'react-reveal/Fade';
+import { ChromePicker } from 'react-color';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useParams } from 'react-router-dom';
+import { SpinnerRoundOutlined } from 'spinners-react';
+import Container from './Container';
+import './DetailsPage.css';
 
 import {
   fetchCarDetails,
   getDetailsView,
   getDetailsStatus,
-} from "../redux/carSlice";
+} from '../redux/carSlice';
 
 const DetailsPage = () => {
-  const [currentColor, setCurrentColor] = useState("#97bf10");
+  const [currentColor, setCurrentColor] = useState('#0093AB');
   const handleOnChange = (color) => {
     setCurrentColor(color.hex);
   };
@@ -75,7 +75,7 @@ const DetailsPage = () => {
         </div>
       </div>
     );
-  } else if (status === "loading") {
+  } else if (status === 'loading') {
     renderDetails = (
       <div className="loader">
         Loading Cars ..
